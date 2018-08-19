@@ -1,0 +1,36 @@
+<html>
+
+        <head>
+                <link rel="stylesheet" href="/css/bootstrap.css">
+        
+        </head>
+
+    <body>
+        <table border="1px" class="table table-striped">
+            <thead class="thead-dark">
+             <tr>
+                <th>Id</th>
+                <th>Medico</th>
+                <th>Especialidade</th>
+                <th>Data</th>
+                <th>Horário</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <% for(var i=0; i<lista.length; i++) {%>
+                    <tr>
+                        <td><%= lista[i].id %></td>
+                        <td><%= lista[i].medico %></td>
+                        <td><%= lista[i].especialidade %></td>
+                        <td><%= lista[i].data%></td>
+                        <td><%= lista[i].horario%></td>
+                    </tr>
+                <% } %>
+            </tr>
+        </tbody>
+        </table>
+    </body>
+
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+</html>

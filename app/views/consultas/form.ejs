@@ -1,0 +1,73 @@
+<html>
+
+<head>
+        <link rel="stylesheet" href="/css/bootstrap.css">
+
+</head>
+    <body>
+        <div class='erros'>
+             <%if(errosValidacao){%>
+                <ul>
+                    <%for(var i=0;i<errosValidacao.length;i++){%>
+                        <li><%=errosValidacao[i].param%> - <%=errosValidacao[i].msg%></li>
+                    <%}%>
+                </ul>
+             <%}%>
+        </div>
+
+
+        <form action="/consultas" method="post">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Nova Consulta</h1>
+                </div>
+                
+                <div class="panel-body">
+        
+        
+                    <div class="form-group">
+                        <label for="medico" class="col-sm-2 control-label">Médico</label>
+                        <div class="col-sm-3"> 
+                            <input type="text" class="form-control" id="medico" name="medico" value="<%=consulta.medico%>" placeholder="Informe o nome do médico"/>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="especialidade" class="col-sm-2 control-label">Especialidade</label>
+                        <div class="col-sm-3"> 
+                            <input type="text" class="form-control" id="especialidade" name="especialidade" value="<%=consulta.especialidade%>" placeholder="Informe a especialidade"/>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="data" class="col-sm-2 control-label">Data</label>
+                        <div class="col-sm-3"> 
+                            <input type="date" class="form-control" id="data" name="data" value="<%=consulta.data%>"/>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="horario" class="col-sm-2 control-label">Horário</label>
+                        <div class="col-sm-3"> 
+                            <input type="text" class="form-control" id="horario" name="horario" value="<%=consulta.horario%>" placeholder="Informe o horário"/>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" value="gravar">Salvar</button>
+
+            </div>  
+            </div>
+         
+        </form>
+
+
+     
+    </body>
+
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+</html>
